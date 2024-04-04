@@ -14,6 +14,7 @@ import { CartQuickOrderFeatureModule } from './features/cart/cart-quick-order-fe
 import { CartImportExportFeatureModule } from './features/cart/cart-import-export-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
 import { CustomMiniCartModule } from './features/custom_components/mini-cart/custom-mini-cart.module';
+import { CustomSearchBoxModule } from './features/custom_components/search-box/search-box.module';
 
 @NgModule({
   declarations: [],
@@ -94,7 +95,8 @@ import { CustomMiniCartModule } from './features/custom_components/mini-cart/cus
     CartImportExportFeatureModule,
     AsmFeatureModule,
     // Custom modules
-    CustomMiniCartModule
+    CustomMiniCartModule,
+    CustomSearchBoxModule
   ]
 })
 export class SpartacusFeaturesModule { }
