@@ -1,0 +1,30 @@
+.cart-background {
+  background-color: transparent;
+}
+
+.cart-text {
+  color: yellow;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;  
+}
+
+.cart-text:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.cart-text:active {
+  color: yellow;
+  text-decoration: none;
+}
+
+.balloon {
+  background-color: green;
+  border-radius: 100%;
+  color: white;
+  position: relative;
+  right: 3px;
+  top: -13px;
+}
+
