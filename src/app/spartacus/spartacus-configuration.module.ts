@@ -1,16 +1,7 @@
 import { NgModule } from '@angular/core';
-import { translationChunksConfig, translations } from "@spartacus/assets";
-import { common } from "../../assets/src/translations/en/common";
+import { translationChunksConfig } from "@spartacus/assets";
 import { FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
 import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacus/storefront";
-
-export const translationOverwrites = {
-  en: {
-    common: {
-      searchBox: common.searchBox
-    }
-  }
-}
 
 @NgModule({
   declarations: [],
@@ -28,16 +19,16 @@ export const translationOverwrites = {
       language: ['en'],
       baseSite: ['electronics-spa'],
     },
-  }), provideConfig(<I18nConfig>{
+  }),
+  provideConfig({
     i18n: {
-      resources: translations,
+      backend: {
+        loadPath: '../../assets/i18n-assets/{{lng}}/{{ns}}.json'
+      },
       chunks: translationChunksConfig,
       fallbackLang: 'en'
     },
-  }),
-  provideConfig({
-    i18n: { resources: translationOverwrites },
-  }),
+  }),  
   provideConfig(<FeaturesConfig>{
     features: {
       level: '4.3'
